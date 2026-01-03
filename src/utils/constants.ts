@@ -43,6 +43,7 @@ export const sushiswapV2Routers: {[key in ChainName]: string} = {
     Bsc:      '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     Opbnb:    '',
     Polygon:  '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    PolygonZkEvm: '',
     Avalanche:'0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     Scroll:   '0x9B3336186a38E1b6c21955d112dbb0343Ee061eE',
     Blast:    '0x54CF3d259a06601b5bC45F61A16443ed5404DD64',
@@ -67,6 +68,7 @@ export const stargateParams: {[key in ChainName]: StargateParams} = {
     Bsc:      undefined,
     Opbnb:    undefined,
     Polygon:  undefined,
+    PolygonZkEvm: undefined,
     Avalanche:undefined,
     Scroll:   {stargatePoolNativeAddress: '0xC2b638Cb5042c1B3c5d5C969361fB50569840583', eid: 30214},
     Blast:    undefined,
@@ -90,6 +92,7 @@ export const networkNameToCoingeckoQueryString: {[key in ChainName]: string} = {
     Bsc: 'binance-smart-chain',
     Opbnb: 'opbnb',
     Polygon: 'polygon-pos',
+    PolygonZkEvm: 'polygon-zkevm',
     Avalanche: 'avalanche',
     Scroll: 'scroll',
     Blast: 'blast',
@@ -318,6 +321,29 @@ export const chains: {[key: string]: Chain} = {
             }
         },
         multicall: '0xcA11bde05977b3631167028862bE2a173976CA11'
+    },
+    PolygonZkEvm: {
+    id: 1101,
+    lzId: '0',
+
+    rpc: ['https://zkevm-rpc.com'],
+    explorer: 'https://zkevm.polygonscan.com/tx/',
+    currency: { name: 'ETH' },
+
+    tokens: {
+        ETH: {
+            name: 'Ethereum',
+            decimals: 18n,
+            address: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
+        },
+        WNATIVE: {
+            name: 'WETH',
+            decimals: 18n,
+            address: '0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9'
+        }
+    },
+
+    multicall: '0xcA11bde05977b3631167028862bE2a173976CA11'
     },
     Avalanche: {
         id: 43114,

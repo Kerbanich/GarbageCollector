@@ -97,7 +97,7 @@ export class BridgeConfig {
 
         Ethereum (S|R) | Arbitrum (S|R) | Optimism (S|R) |  Base (S|R)   |   Linea (S|R)   |  
         Zksync (_|R)   |                |                |               |                 |
-        Scroll (S|R)   |  Blast (_|R)   |                |               |                 |
+        Scroll (S|R)   |  Blast (_|R)   |PolygonZkEvm (R)|               |                 |
         Nova (_|R)     |                |                | Taiko (_|R)   |                 |
     ***************************************************************************************/
     /**
